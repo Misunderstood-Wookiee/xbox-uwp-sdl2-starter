@@ -40,6 +40,19 @@
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="ports">
+            <uap:DisplayName>Xbox Port</uap:DisplayName>
+            <uap:Logo>Assets\StoreLogo.png</uap:Logo>
+          </uap:Protocol>
+        </uap:Extension>
+      </Extensions>
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Type="include" Match="https://ports.*.*" WindowsRuntimeAccess="all"/>
+        <uap:Rule Type="include" Match="https://*.*" WindowsRuntimeAccess="all"/>
+        <uap:Rule Type="include" Match="" WindowsRuntimeAccess="none"/>
+      </uap:ApplicationContentUriRules>
     </Application>
   </Applications>
 
